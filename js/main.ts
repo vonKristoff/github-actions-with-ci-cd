@@ -1,27 +1,14 @@
-const data = { fraction: 0.5, message: "Hello World" }
-
-function dyi({ message }) {
-  return `${message}!`
+function add(a, b) {
+  return a + b
 }
 
-const state = { ...data, fraction: 0.75 }
-
-console.log(dyi(state))
-
-type Style = "bold" | "italic" | "heading" | "indented"
-
-let font: Style
-
-font = "heading"
-
-const test = font + "--type"
-
-console.log(test)
-
-const double = [1, 2, 3].map(num => num * 2)
-
-const app = {
-  spesh: thing => [...thing, false]
+function subtract(a, b) {
+  return a - b
 }
 
-console.log(app.spesh(double))
+function isPositive(sum) {
+  const positive = sum >= 0
+  return [sum, positive]
+}
+
+module.exports = { isPositive, add, subtract }
