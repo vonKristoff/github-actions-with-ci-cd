@@ -10,10 +10,10 @@ test('subtract', () => {
 
 test('isPositive is true', () => {
   const [sum, isPositive] = main.isPositive(main.subtract(10, 5))
-  expect(isPositive).toBeFalsy()
+  expect(isPositive).toBeTruthy()
 })
 
 test('isPositive is false', () => {
-  const [sum, isPositive] = main.isPositive(main.subtract(25, 15))
+  const [sum, isPositive] = main.isPositive(main.subtract(5, 15))
   expect(isPositive).toBeFalsy()
 })
